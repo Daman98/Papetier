@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Papetier|MakeQuestion</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        #form_container{
+            border-style:solid;
+            border-width: 5px;
+            padding:30px;
+            margin-left:25%;
+            width:50%;
+        }
+        #heading{
+            font-family:verdana;
+        }
+    </style>
+</head>
+<body>
+{% block content %}
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/main">Papetier</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="/post/search"><span class="glyphicon glyphicon-education"></span> Generate a Question Paper</a></li>
+        <li><a href="/post/new/bytext/"><span class="glyphicon glyphicon-plus"></span> Contribute to Question Database(by text)</a></li>
+        <li><a href="/post/new/byimage/"><span class="glyphicon glyphicon-plus"></span> Contribute to Question Database(by image)</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <h1 id="heading"><center>Contribute a New Question</center></h1>
+    <div id="form_container">
+        <form method='POST' class="post-form" action='{{ action_url }}' enctype='multipart/form-data'>{% csrf_token %}
+        {{ form.as_p }}
+        <p><span style="color:red;">&emsp;&emsp;*</span><a href="https://azure.microsoft.com/en-in/services/cognitive-services/computer-vision/#read-handwriting-image-form-results" target="blank">click here </a>If you want to convert question image to text and copy the generated text in the question field above</p>
+        <button type="submit" class="save btn btn-default">Upload Question</button>
+        </form>
+    </div>
+{% endblock %}
+</body>
+</html>

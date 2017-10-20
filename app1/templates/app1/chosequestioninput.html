@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Papetier|Main</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body{
+        background-image: url("Papetier/app1/templates/app1/background.jpg");
+    }
+    #welcome{
+        color: green;
+        margin-top:10%;
+        margin-left:20%;
+        font-size:70px;
+        font-family:verdana;
+    }
+
+</style>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/main">Papetier</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="/post/search"><span class="glyphicon glyphicon-education"></span> Generate a Question Paper</a></li>
+        <li><a href="/post/new/bytext/"><span class="glyphicon glyphicon-plus"></span> Contribute to Question Database(by text)</a></li>
+        <li><a href="/post/new/byimage/"><span class="glyphicon glyphicon-plus"></span> Contribute to Question Database(by image)</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        <a href="/post/new/bytext/" class="btn btn-primary">By text question</a>
+        <a href="/post/new/bytext/" class="btn btn-primary">By image question</a>
+</body>
+</html>

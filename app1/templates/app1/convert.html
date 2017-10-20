@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function() {
+var obj =   {%autoescape off%}{{x}}{%endautoescape%};
+var y="";
+for(var x = 0; x<obj.recognitionResult.lines.length; x=x+1){
+	y+=obj.recognitionResult.lines[x].text+" "+"<br>";
+}
+
+$("#demo").html(y);
+});
+
+</script>
+
+
+</head>
+
+<body>
+
+<p id="demo"></p>
+
+
+
+
+</body>
+</html>
