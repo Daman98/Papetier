@@ -1,4 +1,4 @@
-# papetier_1
+# Papetier
 Automated Question Generating Web Application
 
 Papetier
